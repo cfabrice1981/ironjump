@@ -114,7 +114,7 @@ function update() {
   }
   
   var newBall = {
-    radius: 50,
+    radius: 20,
     x: ball.x + ball.vx,
     y: ball.y + ball.vy,
     vx: ball.vx*0.9,

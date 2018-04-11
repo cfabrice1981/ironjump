@@ -7,69 +7,69 @@ var platforms = [
   {
     x: 400,
     y: 500,
-    width: 200
+    width: 100
   },
   {
     x: 600,
     y: -100,
-    width: 200
+    width: 100
   },
   {
     x: 800,
     y: 0,
-    width: 200
+    width: 100
   },
   {
     x: 300,
     y: -250,
-    width: 200,
+    width: 100,
     color: "rgb(255, 60, 60)"
   },
   {
     x: 0,
     y: -500,
-    width: 200
+    width: 100
   },
   {
     x: 150,
     y: -750,
-    width: 200,
+    width: 100,
     color: "rgb(100, 110, 255)"
   },
   {
     x: 0,
     y: -1000,
-    width: 200
+    width: 100
   },
   {
     x: 400,
     y: -1500,
-    width: 200
+    width: 100
   },
   {
     x: 400,
     y: -2000,
-    width: 200
+    width: 100
   },
   {
     x: 600,
     y: -2500,
-    width: 200
+    width: 100
   },
   {
     x: 400,
     y: -3000,
-    width: 200
+    width: 100
   },
   {
     x: 600,
     y: -3500,
-    width: 200
+    width: 100
   },
   {
     x: 400,
     y: -4000,
-    width: 200
+    width: 100
   },
 ]
 
