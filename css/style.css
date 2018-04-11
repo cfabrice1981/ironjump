@@ -2,6 +2,10 @@ html {
   font-family: sans-serif;
 }
 
+body {
+  background-color: aquamarine;
+}
+
 .container {
   display: flex;
   justify-content: center;

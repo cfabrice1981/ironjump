@@ -1,13 +1,7 @@
 var ctx;
-var width = 1000; // Default value is 1000
-var height = 1700; // Default value is 1700
 var ball = {};
 var camera = {};
-gravity = 5; // Default value is 5
-intervalTimeout = 25; // Default value is 25
 var intervalId;
-var debug = true; // Change it to false to remove the grid
-
 
 // When all the HTML is loaded
 $(document).ready(function() {  
@@ -79,14 +73,14 @@ function setNewScore(score) {
 function play() {
   $(".menu").hide();
   $("canvas").show();
-  ball = {
-    radius: 50,  
+  ball = {    
+    radius: 100,  
     x: width/2,
     y: height/2,
     vx: 0,
     vy: 10,
     color: 'black',
-  }
+  } 
   camera = {
     y: 0,
     vy: -3,
@@ -102,6 +96,9 @@ function changeBgColor() {
   if ($("canvas").css("background-color") == "rgb(255, 60, 60)") {
     $("canvas").css("background-color", "rgb(100, 110, 255)");
   }
+  else if ($("canvas").css("background-color") == "rgb(100, 110, 255)") {
+    $("canvas").css("background-color", "#f4b93a");
+  }
   else {
     $("canvas").css("background-color", "rgb(255, 60, 60)");
   }
@@ -114,7 +111,7 @@ function update() {
   }
   
   var newBall = {
-    radius: 20,
+    radius: 50,
     x: ball.x + ball.vx,
     y: ball.y + ball.vy,
     vx: ball.vx*0.9,
