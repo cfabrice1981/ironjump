@@ -9,6 +9,7 @@ $(document).ready(function() {
 
   ctx = $("canvas")[0].getContext("2d");
 
+
   // Change the background color every time the user click on "canvas"
   $("canvas").click(function(event){
     changeBgColor();
@@ -116,7 +117,7 @@ function update() {
     y: ball.y + ball.vy,
     vx: ball.vx*0.9,
     vy: ball.vy + gravity,
-    color: 'black',
+    color: 'black'
   }
 
   for (var i = 0; i < platforms.length; i++) {
@@ -157,6 +158,7 @@ function drawEverything() {
 
   drawBall(ball);
 
+
   for (var i = 0; i < platforms.length; i++) {
     drawPlatform(platforms[i]);
   }
@@ -165,18 +167,23 @@ function drawEverything() {
     drawGridCoordinates();
   }
   
+  
   ctx.restore();
 
   drawMenu();
+
 }
 
 function drawBall(ball) {
-  ctx.save();  
-  ctx.beginPath();
-  ctx.arc(ball.x, ball.y, ball.radius, 0, 2 * Math.PI, false);
-  ctx.fillStyle = ball.color;
-  ctx.fill();
-  ctx.restore();  
+  // ctx.save();  
+  // ctx.beginPath();
+  // ctx.arc(ball.x, ball.y, ball.radius, 0, 2 * Math.PI, false);
+  // ctx.fillStyle = ball.color;
+  // ctx.fill();
+  // ctx.restore();  
+  var playerImg = new Image();
+  playerImg.src = "./../cat.png";
+  ctx.drawImage(playerImg, ball.x-100/2, ball.y-100/2, 100, 100);
 }
 
 function drawPlatform(platform) {
